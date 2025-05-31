@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Register</title></head>
+<body>
+<h1>Реєстрація</h1>
+<form th:action="@{/login}" method="post">
+    <label>Логін: <input type="text" name="username"/></label><br/>
+    <label>Пароль: <input type="password" name="password"/></label><br/>
+    <input type="hidden" th::name = "${_csrf.parameterName}" th::value = "${_csrf.token}">
+    <button type="submit">Зареєструватися</button>
+</form>
+</body>
+</html>

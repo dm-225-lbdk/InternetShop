@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна сторінка</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Навігація</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <div class="col">
+            <a th:href="@{/products}" class="btn btn-primary w-100 py-3">Продукти</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/products/1}" class="btn btn-primary w-100 py-3">Окремий продукт</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/products/create}" class="btn btn-primary w-100 py-3">Створити продукт</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/orders}" class="btn btn-primary w-100 py-3">Замовлення</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/orders/1}" class="btn btn-primary w-100 py-3">Окреме замовлення</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/orders/create}" class="btn btn-primary w-100 py-3">Оформлення замовлення</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/order-items/order/1}" class="btn btn-primary w-100 py-3">Товари із замовлення</a>
+        </div>
+        <div class="col">
+            <a th:href="@{/order-items}" class="btn btn-primary w-100 py-3">Додати товар до замовлення</a>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

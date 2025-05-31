@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    database: postgresql
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5433/internetShop
+    username: postgres
+    password: UKR_0510
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+  mvc:
+    hidden-method:
+      filter:
+        enabled: true
+  logging:
+    level:
+      org.springframework.security: DEBUG
+      org.springframework.security.web.access: DEBUG
